@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  font-size: 1rem;
+  position: absolute;
+  background-color: rgb(238, 237, 237);
+}
+ul{
+  list-style-type: none;
+}
+
+
+.wall-clock{
+  position:relative;
+  width:30rem;
+  height:30rem;
+  margin:2rem auto;
+  border-radius: 30px;
+background: #e6eaeb;
+box-shadow:  8px 8px 10px #0e8bb1,
+             -5px -10px 1px #086a85;
+}
+
+ .wall-clock:before{
+  content:'';
+  width:80%;
+  height:80%;
+  position:absolute;
+  top:40px; 
+  left:50px;
+  padding-bottom: 10px;
+   /* right: 70px;  */
+  border-radius: 50%;
+background: #f2f2f2;
+box-shadow:  5px 5px 7px #d0d0d0,
+             -5px -5px 7px #086a85;
+}
+
+.wall-clock:after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: rgb(250, 252, 252);
+  position: absolute;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  top: 43%;
+  left: 46%;
+  right: 0%;
+  box-shadow:  5px 5px 7px #d0d0d0,
+             -5px -5px 7px #086a85;
+}
+
+.clock .clock-wrap ul{
+  float:left;
+  width:33.1%;
+  height: 200px;
+  color:teal;
+  
+} 
+
+.clock .clock-wrap li{
+  font-size:1rem;
+  line-height:2;
+  letter-spacing:2px;
+  text-align:center;
+  position:relative;
+  left:1px;
+  /* border: 1px solid red; */
+}
+
+.clock .numbers{
+  width:35%;
+  height:100%;
+  border-radius:15em;
+  position:absolute;
+  top:0; left:50%;
+  margin-left:-15em;
+  /* border: 1px solid red; */
+}
+
+.clock .numbers li{
+  list-style: none;
+  position: absolute;
+}
+
+.num{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 11%;
+  text-align: center;
+}
+
+.num span{
+  /* width: 100%; */
+  display: block;
+  color: teal;
+  font-size: 38px;
+  text-shadow: 0 5px 10px black, 0 3px #00000033;
+}
+
+.num:nth-child(1){
+  transform: rotate(30deg);
+}
+.num:nth-child(1) span{
+  transform: rotate(-30deg);
+}
+
+.num:nth-child(2){
+  transform: rotate(60deg);
+}
+
+.num:nth-child(2) span{
+  transform: rotate(-60deg);
+}
+
+.num:nth-child(3){
+  transform: rotate(90deg);
+}
+.num:nth-child(3) span{
+  transform: rotate(-90deg);
+}
+
+.num:nth-child(4){
+  transform: rotate(120deg);
+}
+.num:nth-child(4) span{
+  transform: rotate(-120deg);
+}
+
+.num:nth-child(5){
+  transform: rotate(150deg);
+}
+.num:nth-child(5) span{
+  transform: rotate(-150deg);
+}
+.num:nth-child(6){
+  transform: rotate(180deg);
+}
+.num:nth-child(6) span{
+  transform: rotate(180deg);
+}
+
+.num:nth-child(7){
+  transform: rotate(210deg);
+}
+.num:nth-child(7) span{
+  transform: rotate(-210deg);
+}
+
+.num:nth-child(8){
+  transform: rotate(240deg);
+}
+.num:nth-child(8) span{
+  transform: rotate(-240deg);
+}
+
+.num:nth-child(9){
+  transform: rotate(270deg);
+}
+.num:nth-child(9) span{
+  transform: rotate(-270deg);
+}
+
+.num:nth-child(10){
+  transform: rotate(300deg);
+}
+.num:nth-child(10) span{
+  transform: rotate(-300deg);
+}
+
+.num:nth-child(11){
+  transform: rotate(330deg);
+}
+.num:nth-child(11) span{
+  transform: rotate(-330deg);
+}
+.num:nth-child(12){
+  transform: rotate(360deg);
+}
+.num:nth-child(12) span{
+  transform: rotate(-360deg);
+}
+
+.seconds-tick{
+  width: 100%;
+  height: 100%;
+  animation: sec 60s steps(60, end) infinite;
+}
+
+.seconds-tick::after{
+  content: "";
+  width: 4px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  margin-top: 50px;
+  box-shadow: 1px 2px 3px #00000026;
+}
+
+.minutes-tick{
+  width: 100%;
+  height: 100%;
+  animation: minutes 3600s steps(60, end) infinite;
+}
+
+.minutes-tick::after{
+  content: "";
+  width: 6px;
+  height: 100px;
+  border-radius: 50%;
+  /* border: 1px solid red; */
+  background-color: teal;
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  margin-top: 50px;
+  box-shadow: 2px 9px 25px #eb101026;
+  /* transform: rotate(-60deg); */
+}
+
+.hours-tick{
+  width: 100%;
+  height: 100%;
+  transform:rotate(-90deg);
+  animation:hours 43200s linear 0s infinite;
+}
+
+.hours-tick:after{
+  content: "";
+  width: 10px;
+  height: 90px;
+  border-radius: 50%;
+  background:rgb(49, 49, 49);
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
